@@ -9,6 +9,8 @@ import android.widget.Toast;
 import com.guozheng.okhttputils.okhttp.CallBackUtil;
 import com.guozheng.okhttputils.okhttp.OkhttpUtil;
 
+import java.util.HashMap;
+
 import okhttp3.Call;
 
 public class MainActivity extends AppCompatActivity {
@@ -32,6 +34,20 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        HashMap<String, String> paramsMap = new HashMap<>();
+        paramsMap.put("title","title");
+        paramsMap.put("desc","desc");
+        OkhttpUtil.okHttpPost(url, paramsMap, new CallBackUtil.CallBackString() {
+            @Override
+            public void onFailure(Call call, Exception e) {
+
+            }
+
+            @Override
+            public void onResponse(String response) {
+
+            }
+        });
 
     }
 }
