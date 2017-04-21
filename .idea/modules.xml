@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/OkhttpUtils.iml" filepath="$PROJECT_DIR$/OkhttpUtils.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OKHttpUtils.iml" filepath="$PROJECT_DIR$/OKHttpUtils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OkhttpUtils/OkhttpUtils.iml" filepath="$PROJECT_DIR$/OkhttpUtils/OkhttpUtils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sampleokhttp/sampleokhttp.iml" filepath="$PROJECT_DIR$/sampleokhttp/sampleokhttp.iml" />
     </modules>
   </component>
 </project>
