@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="E:\developTest\OkhttpUtils\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="3be474b1b21b31cf2fa93fe6bd641ae108d96452">
+        <dex dex="E:\developTest\OkhttpUtils\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.2.1_cd46a3c612901bfc23b18f1e00997e65bf4c1ee9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\developTest\OkhttpUtils\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="e4d0cbb0b999604b349062f0214a0a228a7fd151">
+        <dex dex="E:\developTest\OkhttpUtils\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.2.1_4595f5e023d7b6ee1f323ba93dd41597b745d368.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\develop\sdk\extras\android\m2repository\com\android\support\support-annotations\23.2.1\support-annotations-23.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="ccb693bc0774fcb637246f7360de25b4af7df318">
+        <dex dex="E:\developTest\OkhttpUtils\app\build\intermediates\pre-dexed\debug\support-annotations-23.2.1_4e071e6691901e474a44aba546a135d95e43a38b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\developTest\OkhttpUtils\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.1\jars\libs\internal_impl-23.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="607a3d0b8013b4ccbfeb0b7cb293351994e021fb">
+        <dex dex="E:\developTest\OkhttpUtils\app\build\intermediates\pre-dexed\debug\internal_impl-23.2.1_8d3a3a34d2668cf739e6e84d3ef4b529c632462c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\fighting\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.9.0\f824591a0016efbaeddb8300bee54832a1398cfa\okio-1.9.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="f824591a0016efbaeddb8300bee54832a1398cfa">
+        <dex dex="E:\developTest\OkhttpUtils\app\build\intermediates\pre-dexed\debug\okio-1.9.0_dd0ef6bf7683fd4a37c5b2fa7e4b9d55b1ff059d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\developTest\OkhttpUtils\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="673d77a5bbddd766037f088e775df525c46407f0">
+        <dex dex="E:\developTest\OkhttpUtils\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-23.2.1_86486e5da7d07008ec38de51ad54aebb0377c474.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\fighting\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.4.1\c7c4f9e35c2fd5900da24f9872e3971801f08ce0\okhttp-3.4.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="c7c4f9e35c2fd5900da24f9872e3971801f08ce0">
+        <dex dex="E:\developTest\OkhttpUtils\app\build\intermediates\pre-dexed\debug\okhttp-3.4.1_bee73ef7b75685bcb4ad046f2d6a6b023d5c5a73.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\developTest\OkhttpUtils\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="fb12085095fbdd06e3a2b36f674d6d87b68f9945">
+        <dex dex="E:\developTest\OkhttpUtils\app\build\intermediates\pre-dexed\debug\instant-run-bootstrap_e6d5a21cdb0228da0471eb752e5f2479db94ea91.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\developTest\OkhttpUtils\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="2de309e3806f7878d395b3494691b9386153d1bf">
+        <dex dex="E:\developTest\OkhttpUtils\app\build\intermediates\pre-dexed\debug\instant-run_0597e82d8d82a6a95ea833bce4c3b2a584c961df.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\developTest\OkhttpUtils\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="3469cb457f10f74c28cbc05f069b6c894f6cbdd0">
+        <dex dex="E:\developTest\OkhttpUtils\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-23.2.1_ef56cbd259680feab351a0a67316f99bb8e931c4.jar" />
+    </item>
+
+</items>
