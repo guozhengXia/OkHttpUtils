@@ -86,40 +86,60 @@ class RequestUtil {
         if(mFile != null || mfileList != null || mfileMap != null){//先判断是否有文件，
             setFile();
         }else {
-            if(mParamsMap != null){
-                setKeyAndVelueParams();
-            }
-            if(TextUtils.isEmpty(mJsonStr)){
-                setPostJson();
+            //设置参数
+            switch (mMetyodType){
+                case OkhttpUtil.METHOD_GET:
+                    setGetParams();
+                    break;
+                case OkhttpUtil.METHOD_POST:
+                    mRequestBuilder.post(getRequestBody());
+                    break;
+                case OkhttpUtil.METHOD_PUT:
+                    mRequestBuilder.put(getRequestBody());
+                    break;
+                case OkhttpUtil.METHOD_DELETE:
+                    mRequestBuilder.delete(getRequestBody());
+                    break;
             }
         }
         mRequestBuilder.url(mUrl);
         if(mHeaderMap != null){
             setHeader();
         }
+        //mRequestBuilder.addHeader("Authorization","Bearer "+"token");可以把token添加到这儿
         mOkHttpRequest = mRequestBuilder.build();
     }
 
     /**
-     * 只有paramsMap键值对参数
+     * 得到body对象
      */
-    private void setKeyAndVelueParams() {
-        switch (mMetyodType){
-            case "GET":
-                setGetKeyAndVelueParams();
-                break;
-            case "POST":
-                setPostKeyAndVelueParams();
-                break;
-            default:
-                break;
+    private RequestBody getRequestBody() {
+        /**
+         * 首先判断mJsonStr是否为空，由于mJsonStr与mParamsMap不可能同时存在，所以先判断mJsonStr
+         */
+        if(!TextUtils.isEmpty(mJsonStr)){
+            MediaType JSON = MediaType.parse("application/json; charset=utf-8");//数据类型为json格式，
+            return RequestBody.create(JSON, mJsonStr);//json数据，
         }
+
+        /**
+         * post,put,delete都需要body，但也都有body等于空的情况，此时也应该有body对象，但body中的内容为空
+         */
+        FormBody.Builder formBody = new FormBody.Builder();
+        if(mParamsMap != null) {
+            for (String key : mParamsMap.keySet()) {
+                formBody.add(key, mParamsMap.get(key));
+            }
+        }
+        return formBody.build();
     }
+
+
 
     /**
      * get请求，只有键值对参数
      */
-    private void setGetKeyAndVelueParams() {
+    private void setGetParams() {
         if(mParamsMap != null){
             mUrl = mUrl+"?";
             for (String key: mParamsMap.keySet()){
@@ -129,29 +149,6 @@ class RequestUtil {
         }
     }
 
-    /**
-     * post请求，只有键值对参数
-     */
-    private void setPostKeyAndVelueParams() {
-        if(mParamsMap != null){
-            FormBody.Builder formBody = new FormBody.Builder();
-            for (String key: mParamsMap.keySet()){
-                formBody.add(key,mParamsMap.get(key));
-            }
-            mRequestBuilder.post(formBody.build());
-        }
-    }
-
-    /**
-     * 只有json格式参数
-     */
-    private void setPostJson() {
-        if(!TextUtils.isEmpty(mJsonStr)){
-            MediaType JSON = MediaType.parse("application/json; charset=utf-8");//数据类型为json格式，
-            RequestBody body = RequestBody.create(JSON, mJsonStr);//json数据，
-            mRequestBuilder.post(body);
-        }
-    }
 
     /**
      * 设置上传文件

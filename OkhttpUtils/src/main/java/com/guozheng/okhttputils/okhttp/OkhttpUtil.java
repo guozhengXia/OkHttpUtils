@@ -10,8 +10,10 @@ import java.util.Map;
 
 public class OkhttpUtil {
 
-    private static final String METHOD_GET = "GET";
-    private static final String METHOD_POST = "POST";
+    public static final String METHOD_GET = "GET";
+    public static final String METHOD_POST = "POST";
+    public static final String METHOD_PUT = "PUT";
+    public static final String METHOD_DELETE = "DELETE";
 
     public static final String FILE_TYPE_FILE = "file/*";
     public static final String FILE_TYPE_IMAGE = "image/*";
@@ -77,6 +79,64 @@ public class OkhttpUtil {
      */
     public static void okHttpPost(String url, Map<String, String> paramsMap, Map<String, String> headerMap, CallBackUtil callBack) {
         new RequestUtil(METHOD_POST, url, paramsMap, headerMap, callBack).execute();
+    }
+/**
+     * post请求
+     * @param url：url
+     * @param callBack：回调接口，onFailure方法在请求失败时调用，onResponse方法在请求成功后调用，这两个方法都执行在UI线程。
+     */
+    public static void okHttpPut(String url, CallBackUtil callBack) {
+        okHttpPut(url, null, callBack);
+    }
+
+    /**
+     * post请求，可以传递参数
+     * @param url：url
+     * @param paramsMap：map集合，封装键值对参数
+     * @param callBack：回调接口，onFailure方法在请求失败时调用，onResponse方法在请求成功后调用，这两个方法都执行在UI线程。
+     */
+    public static void okHttpPut(String url, Map<String, String> paramsMap, CallBackUtil callBack) {
+        okHttpPut(url, paramsMap, null, callBack);
+    }
+
+    /**
+     * post请求，可以传递参数
+     * @param url：url
+     * @param paramsMap：map集合，封装键值对参数
+     * @param headerMap：map集合，封装请求头键值对
+     * @param callBack：回调接口，onFailure方法在请求失败时调用，onResponse方法在请求成功后调用，这两个方法都执行在UI线程。
+     */
+    public static void okHttpPut(String url, Map<String, String> paramsMap, Map<String, String> headerMap, CallBackUtil callBack) {
+        new RequestUtil(METHOD_PUT, url, paramsMap, headerMap, callBack).execute();
+    }
+/**
+     * post请求
+     * @param url：url
+     * @param callBack：回调接口，onFailure方法在请求失败时调用，onResponse方法在请求成功后调用，这两个方法都执行在UI线程。
+     */
+    public static void okHttpDelete(String url, CallBackUtil callBack) {
+        okHttpDelete(url, null, callBack);
+    }
+
+    /**
+     * post请求，可以传递参数
+     * @param url：url
+     * @param paramsMap：map集合，封装键值对参数
+     * @param callBack：回调接口，onFailure方法在请求失败时调用，onResponse方法在请求成功后调用，这两个方法都执行在UI线程。
+     */
+    public static void okHttpDelete(String url, Map<String, String> paramsMap, CallBackUtil callBack) {
+        okHttpDelete(url, paramsMap, null, callBack);
+    }
+
+    /**
+     * post请求，可以传递参数
+     * @param url：url
+     * @param paramsMap：map集合，封装键值对参数
+     * @param headerMap：map集合，封装请求头键值对
+     * @param callBack：回调接口，onFailure方法在请求失败时调用，onResponse方法在请求成功后调用，这两个方法都执行在UI线程。
+     */
+    public static void okHttpDelete(String url, Map<String, String> paramsMap, Map<String, String> headerMap, CallBackUtil callBack) {
+        new RequestUtil(METHOD_DELETE, url, paramsMap, headerMap, callBack).execute();
     }
 
     /**

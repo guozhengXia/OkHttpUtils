@@ -7,6 +7,8 @@
 ## 封装的功能有：
 ###### 一般的get请求
 ###### 一般的post请求
+###### 一般的put请求
+###### 一般的delete请求
 ###### 上传单个文件(包含进度)
 ###### 上传list集合文件
 ###### 上传map集合文件
@@ -31,6 +33,38 @@
     HashMap<String, String> paramsMap = new HashMap<>();
     paramsMap.put("title","title");
     OkhttpUtil.okHttpPost(url, paramsMap, new CallBackUtil.CallBackString() {
+        @Override
+        public void onFailure(Call call, Exception e) {
+
+        }
+
+        @Override
+        public void onResponse(String response) {
+
+        }
+    });
+
+### PUT请求
+    String url = "https://www.baidu.com/";
+    HashMap<String, String> paramsMap = new HashMap<>();
+    paramsMap.put("title","title");
+    OkhttpUtil.okHttpPut(url, paramsMap, new CallBackUtil.CallBackString() {
+        @Override
+        public void onFailure(Call call, Exception e) {
+
+        }
+
+        @Override
+        public void onResponse(String response) {
+
+        }
+    });
+
+### DELETE请求
+    String url = "https://www.baidu.com/";
+    HashMap<String, String> paramsMap = new HashMap<>();
+    paramsMap.put("title","title");
+    OkhttpUtil.okHttpDelete(url, paramsMap, new CallBackUtil.CallBackString() {
         @Override
         public void onFailure(Call call, Exception e) {
 
